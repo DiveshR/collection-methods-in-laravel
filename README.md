@@ -17,6 +17,7 @@ cd collection-methods-in-laravel
 composer install
 cp .env.example .env 
 php artisan key:generate
+php artisan migrate --seed
 php artisan cache:clear && php artisan config:clear 
 php artisan serve 
-`````````
+````````` 
