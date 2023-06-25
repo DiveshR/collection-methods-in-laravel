@@ -30,7 +30,7 @@ It returns total number of records for a given model.
 ```php
 
 Article::count();
-In our case as realationship with user
+//In our case as realationship with user
 Article::with('user')->count();
 
 ```
