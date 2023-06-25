@@ -20,4 +20,21 @@ php artisan key:generate
 php artisan migrate --seed
 php artisan cache:clear && php artisan config:clear 
 php artisan serve 
+<<<<<<< Updated upstream
 ````````` 
+=======
+`````````
+# Working With Numbers
+Collections Methods Related to Numbers
+
+# 1) count()
+It returns total number of records for a given model.
+
+`````php
+
+Article::count();
+In our case as realationship with user
+Article::with('user')->count();
+
+`````
+>>>>>>> Stashed changes
