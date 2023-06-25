@@ -37,7 +37,7 @@ Article::where('is_pblished', true)->count();
 
 ```
 # 2) countBy()
-It group the records by the given column and return count of each group.
+It group the records by the given column and return count of each group.\
 __NOTE:__ Column need to be numeric value otherwise it will be a type error exeption.
 
 ```php
@@ -90,4 +90,42 @@ It return total number of a given column.
 ```php
 Acticle::sum('min_to_read');
 
+```
+
+# where(), whereStrict() & whereBetween
+
+# 7) where()
+It filters the collection by a given key/value pair or a closure.
+
+```php
+$collection = collect([
+	['name' => 'max', 'age' => 20],
+	['name' => 'william', 'age' => 29],
+	['name' => 'Tom', 'age' => 30],
+	['name' => 'Don Rickles', 'age' => 99],
+	['name' => 'John', 'age' => 50],
+]);
+
+$collection->where('age',90);
+output
+    [
+        ['name' => 'Don Rickles', 'age' => 99],
+    ] \
+
+ __NOTE:__ Other than = operator you need to pass it as second agrument.
+
+ $collection->where('age','>',30); 
+ output
+    [
+        ['name' => 'Don Rickles', 'age' => 99],
+		['name' => 'John', 'age' => 50],
+    ]
+
+Article::where('is_published', true)->get();
+Article::where('is_published',true)->where('min_to_read',5)->get(); 
+
+// Can use callback function 
+Article::where(function($query) {
+	return $query->where('is_published',true);
+})->get();
 ```
