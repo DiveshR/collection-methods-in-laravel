@@ -1,6 +1,7 @@
 # Laravel Collection Methods
 
-Some of laravel collection Methods. More in ...
+Some of laravel collection Methods in this Series.
+More in ...
 https://laravel.com/docs/10.x/collections
 
 
