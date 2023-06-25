@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Models\Role;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('users', [UserController::class,'index'])->name('users');
+Route::resource('articles', ArticleController::Class);
+Route::resource('roles', RoleController::class);
