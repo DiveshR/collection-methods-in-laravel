@@ -95,8 +95,8 @@ Acticle::sum('min_to_read');
 # where(), whereStrict() & whereBetween
 
 # 7) where()
-It filters the collection by a given key/value pair or a closure.
-
+It filters the collection by a given key/value pair or a closure.\
+__NOTE:__  Other than = operator you need to pass it as second agrument.
 ```php
 $collection = collect([
 	['name' => 'max', 'age' => 20],
@@ -113,8 +113,6 @@ output
         ['name' => 'Don Rickles', 'age' => 99],
     ];
 
-
- NOTE:  Other than = operator you need to pass it as second agrument.
 
  $collection->where('age','>',30); 
  output
