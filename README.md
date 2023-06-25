@@ -5,4 +5,4 @@ https://laravel.com/docs/10.x/collections
 
 
 * Author: Divesh Kumar
-* Twitter: [Twitter](https://twitter.com/divesh20july)@divesh20july
+* Twitter: [@divesh20july](https://twitter.com/divesh20july)
