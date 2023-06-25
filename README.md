@@ -110,7 +110,7 @@ $collection->where('age',90);
 output
     [
         ['name' => 'Don Rickles', 'age' => 99],
-    ] \
+    ]
 
  __NOTE:__ Other than = operator you need to pass it as second agrument.
 
