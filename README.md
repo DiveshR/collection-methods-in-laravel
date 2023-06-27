@@ -129,3 +129,22 @@ Article::where(function($query) {
 	return $query->where('is_published',true);
 })->get();
 ```
+# 8) whereStrict()
+It uses strict comparison  operator to compare two value.
+```php
+$collection = collect([
+	['name' => 'max', 'age' => 20],
+	['name' => 'Max', 'age' => 29],
+	['name' => 'Tom', 'age' => 30],
+	['name' => 'Don Rickles', 'age' => 99],
+	['name' => 'John', 'age' => 50],
+]);
+
+return $collection->whereStrict('name','Max');
+
+ output
+    [
+		['name' => 'Max', 'age' => 29],
+    ]
+
+```
